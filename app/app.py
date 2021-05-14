@@ -23,7 +23,7 @@ s.loadActionSet(actionSet="sentimentAnalysis")
 s.loadactionset('table')
 
 #A function to convert a given csv with a text column to a CASTable with a unique ID and a text column as required by the text analytics CAS actions
-async def list_to_castable(text_list, table_name):
+def list_to_castable(text_list, table_name):
     docid = list(range(len(text_list)))
     senti_dict = {'docid' : docid,
                 'text' : text_list}
