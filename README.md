@@ -22,5 +22,7 @@ Then test out the API and/or build an application on it/ integrate with an exist
 
 Also please note that the list of strings passed int he body of the request should be divoid of any escape characters and should be enclosed in double quotation marks to be conformant with json formatting. For your convenience, use the following python code to create this list of strings from the text column of your dataframe. In this snippet, the dataframe is assigned to a variable 'df' and the text column in 'df' is 'text'.
 
-strs = df.text.to_list()[:1000] /n
+strs = df.text.to_list()[:1000] 
+
+
 strs = ["'{}'".format(str(item).replace("\"", " ")) for item in strs]
